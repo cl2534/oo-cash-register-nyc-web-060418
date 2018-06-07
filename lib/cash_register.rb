@@ -13,6 +13,7 @@ class CashRegister
     @total += price * quantity
     if quantity > 1 
       (@cart << title) * quantity  
+    end 
   end
   
   def apply_discount
