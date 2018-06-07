@@ -10,10 +10,8 @@ class CashRegister
   
   def add_item(title, price, quantity = 1)
     @total += price * quantity 
-    if @cart.include?(title)
-      break 
-    else 
-      @cart << title 
+    @cart << title if !@cart.include?(title)
+      
     end 
   end
   
