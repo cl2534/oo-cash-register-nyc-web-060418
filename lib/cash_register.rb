@@ -11,7 +11,7 @@ class CashRegister
   
   def add_item(title, price, quantity = 1)
     @total += price * quantity 
-    p @cart.include?(title)
+    p @cart.include?(title) == false 
       @cart << title 
     
   end
