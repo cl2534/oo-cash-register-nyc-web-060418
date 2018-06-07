@@ -14,6 +14,7 @@ class CashRegister
       break 
     else 
       @cart << title 
+    end 
   end
   
   def apply_discount
