@@ -13,7 +13,7 @@ class CashRegister
     @total += price * quantity 
     if @cart.include?(title) == false 
       @cart << title 
-    
+    end
   end
   
   def apply_discount
