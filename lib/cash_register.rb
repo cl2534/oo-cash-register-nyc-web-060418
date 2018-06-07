@@ -2,7 +2,7 @@ class CashRegister
   attr_accessor :total
   attr_accessor :discount
   attr_accessor :cart
-  
+  attr_accessor :last_transaction 
   def initialize(discount = 0)
     @total = 0
     @discount = discount
@@ -14,9 +14,11 @@ class CashRegister
     if quantity > 1 
       quantity.times do 
         (@cart << title)
+        @last_transaction = price 
       end 
     else 
       @cart << title 
+      @last_transaction = price 
     end 
   end
   
@@ -34,6 +36,6 @@ class CashRegister
   end 
   
   def void_last_transaction
-    @total - self.add_item.total 
+    @total - @last_transaction
   end 
 end 
